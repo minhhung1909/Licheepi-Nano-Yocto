@@ -1,0 +1,16 @@
+# /etc/ppp/chatscripts/simcom
+# Chat script for SIMCom A7670C
+
+ABORT "BUSY"
+ABORT "NO CARRIER"
+ABORT "NO DIALTONE"
+ABORT "ERROR"
+ABORT "NO ANSWER"
+
+TIMEOUT 20
+
+"" AT
+OK ATE0
+OK AT+CGDCONT=1,"IP","v-internet"
+OK ATD*99#
+CONNECT

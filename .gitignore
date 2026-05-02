@@ -1,0 +1,19 @@
+# Yocto build artifacts
+build/tmp/
+build/sstate-cache/
+build/downloads/
+build/cache/
+build/pseudodone
+build/conf/local.conf.sample
+build/conf/bblayers.conf.sample
+
+# Logs and tmp
+*.log
+*.swp
+*.bak
+*.pyc
+
+build/tmp/deploy/images/
+# Bỏ qua toàn bộ mã nguồn Yocto gốc để tránh push hàng GB dữ liệu lên git
+poky/
+

@@ -1,0 +1,35 @@
+# /etc/ppp/peers/simcom
+# This is the pppd configuration file for SIMCom A7670C
+
+# The serial port. (A7670C typically uses ttyUSB2 for PPP data, but it might be ttyUSB1 or ttyUSB3 depending on the system).
+/dev/ttyUSB2
+
+# Speed
+115200
+
+# Dial up script
+connect 'chat -s -v -f /etc/ppp/chatscripts/simcom'
+
+# Disconnect script
+disconnect 'chat -s -v -f /etc/ppp/chatscripts/chat-disconnect'
+
+# Hide password in debug log
+hide-password
+
+# The phone is not required to authenticate
+noauth
+
+# Default route
+defaultroute
+
+# Use the DNS servers provided by the network
+usepeerdns
+
+# Hardware flow control
+crtscts
+
+# Do not detach from the terminal
+nodetach
+
+# Assumes that your IP address is allocated dynamically
+noipdefault
