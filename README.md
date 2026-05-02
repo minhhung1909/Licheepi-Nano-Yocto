@@ -17,7 +17,6 @@ Hệ thống được xây dựng dựa trên 3 thành phần cốt lõi:
 Trong dự án này, đã thực hiện porting driver cho module SIM thông qua giao thức USB Serial và PPP.
 
 ### 2. Yocto Pipeline
-Hiểu rõ quy trình BitBake:
 * Sử dụng **Layers** để quản lý cấu hình board-specific.
 * Sửa đổi **Recipes** bằng cách sử dụng `.bbappend` để không can thiệp vào mã nguồn gốc.
 
@@ -26,7 +25,6 @@ Hiểu rõ quy trình BitBake:
     ```bash
     source poky/oe-init-build-env
     ```
-    *(Lệnh này sẽ tự động chuyển bạn vào thư mục `build`)*
 2.  **Build Image:** 
     ```bash
     bitbake core-image-minimal
