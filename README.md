@@ -11,7 +11,7 @@ Hệ thống được xây dựng dựa trên 3 thành phần cốt lõi:
 2.  **Linux Kernel:** Được tùy chỉnh (customized) để hỗ trợ các module GSM/SIM  (chưa test được nhưng đã build thành công).
 3.  **RootFS:** Bản build `core-image-minimal`.
 
-## Những điểm nhấn kỹ thuật (Key Learnings)
+## Key
 
 ### 1. Tùy chỉnh Kernel cho Module SIM
 Trong dự án này, đã thực hiện porting driver cho module SIM thông qua giao thức USB Serial và PPP.
@@ -20,7 +20,7 @@ Trong dự án này, đã thực hiện porting driver cho module SIM thông qua
 * Sử dụng **Layers** để quản lý cấu hình board-specific.
 * Sửa đổi **Recipes** bằng cách sử dụng `.bbappend` để không can thiệp vào mã nguồn gốc.
 
-## Cách Build và Flash
+## Build và Flash
 1.  **Thiết lập môi trường:** Từ thư mục gốc của project (yocto), chạy lệnh:
     ```bash
     source poky/oe-init-build-env
@@ -37,6 +37,7 @@ hoặc sử dụng phần mềm balenaEtcher để flash file ```core-image-mini
 
 ## Thông tin đăng nhập mặc định
 * **User:** `root`
+* **User:** `sheldon`
 * **Password:** Không có
 
 Nguồn tham khảo:
